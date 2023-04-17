@@ -1,0 +1,17 @@
+C:\Users\pyzan\source\repos\MyGame\MyGame\bin\Debug\net6.0-windows\MyGame.exe
+C:\Users\pyzan\source\repos\MyGame\MyGame\bin\Debug\net6.0-windows\MyGame.deps.json
+C:\Users\pyzan\source\repos\MyGame\MyGame\bin\Debug\net6.0-windows\MyGame.runtimeconfig.json
+C:\Users\pyzan\source\repos\MyGame\MyGame\bin\Debug\net6.0-windows\MyGame.dll
+C:\Users\pyzan\source\repos\MyGame\MyGame\bin\Debug\net6.0-windows\MyGame.pdb
+C:\Users\pyzan\source\repos\MyGame\MyGame\obj\Debug\net6.0-windows\MyGame.csproj.AssemblyReference.cache
+C:\Users\pyzan\source\repos\MyGame\MyGame\obj\Debug\net6.0-windows\MyGame.Form1.resources
+C:\Users\pyzan\source\repos\MyGame\MyGame\obj\Debug\net6.0-windows\MyGame.csproj.GenerateResource.cache
+C:\Users\pyzan\source\repos\MyGame\MyGame\obj\Debug\net6.0-windows\MyGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pyzan\source\repos\MyGame\MyGame\obj\Debug\net6.0-windows\MyGame.AssemblyInfoInputs.cache
+C:\Users\pyzan\source\repos\MyGame\MyGame\obj\Debug\net6.0-windows\MyGame.AssemblyInfo.cs
+C:\Users\pyzan\source\repos\MyGame\MyGame\obj\Debug\net6.0-windows\MyGame.csproj.CoreCompileInputs.cache
+C:\Users\pyzan\source\repos\MyGame\MyGame\obj\Debug\net6.0-windows\MyGame.dll
+C:\Users\pyzan\source\repos\MyGame\MyGame\obj\Debug\net6.0-windows\refint\MyGame.dll
+C:\Users\pyzan\source\repos\MyGame\MyGame\obj\Debug\net6.0-windows\MyGame.pdb
+C:\Users\pyzan\source\repos\MyGame\MyGame\obj\Debug\net6.0-windows\MyGame.genruntimeconfig.cache
+C:\Users\pyzan\source\repos\MyGame\MyGame\obj\Debug\net6.0-windows\ref\MyGame.dll
