@@ -9,21 +9,17 @@ namespace MyGame
 {
     internal class Player
     {
-        public enum Color
-        {
-            Red,
-            Blue
-        }
-
         public float X;
         public float Y;
         public int Size;
 
         public float Speed;
 
-        public bool onPlatform;
 
-        public Color color;
+        public bool onPlatform;
+        public bool isJump;
+
+        public MyGame.Form1.Color color;
 
         public int Score;
         public bool isAlive;
@@ -34,26 +30,25 @@ namespace MyGame
 
         public Player(int x, int y)
         {
-            color = Color.Blue;
-            playerImg = new Bitmap("D:\\player_red.png");
             this.X = x;
             this.Y = y;
-            Speed = 1.5f;
+            Speed = 1.0f;
             onPlatform = false;
             this.Size = 64;
             isAlive = true;
             GravityValue = 0.1f;
+            Score = 0;
         }
 
         public void SetRedColor()
         {
-            color = Color.Red;
+            this.color = MyGame.Form1.Color.Red;
             playerImg = new Bitmap("D:\\player_red.png");
         }
 
         public void SetBlueColor()
         {
-            color = Color.Blue;
+            this.color = MyGame.Form1.Color.Blue;
             playerImg = new Bitmap("D:\\player_blue.png");
         }
     }

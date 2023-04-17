@@ -9,17 +9,11 @@ namespace MyGame
 {
     internal class Floor
     {
-        public enum Color
-        {
-            Red,
-            Blue
-        }
-
         public float X;
         public float Y;
         public int SizeX;
         public int SizeY;
-        public Color color;
+        public MyGame.Form1.Color color;
         public Image floorImg;
 
         public Floor(int x, int y)
@@ -31,15 +25,15 @@ namespace MyGame
             SizeY = 30;
         }
 
-        private void SetRedColor()
+        public void SetRedColor()
         {
-            color = Color.Red;
+            color = MyGame.Form1.Color.Red;
             floorImg = new Bitmap("D:\\floor_red.png");
         }
 
-        private void SetBlueColor()
+        public void SetBlueColor()
         {
-            color = Color.Blue;
+            color = MyGame.Form1.Color.Blue;
             floorImg = new Bitmap("D:\\floor_blue.png");
         }
 
