@@ -18,6 +18,11 @@ namespace MyGame
 
         public bool onPlatform;
         public bool isJump;
+        public bool haveDoubleJump = true;
+
+        private int animCounter = 0;
+        public int animStyle = 0;
+        private int animSpeed = 14;
 
         public MyGame.Form1.Color color;
 
@@ -32,24 +37,72 @@ namespace MyGame
         {
             this.X = x;
             this.Y = y;
-            Speed = 1.0f;
+            Speed = 1.5f;
             onPlatform = false;
             this.Size = 64;
             isAlive = true;
             GravityValue = 0.1f;
             Score = 0;
+            SetBlueColor();
+            playerImg = new Bitmap($"D:\\gamecourse\\player_blue1.png");
         }
+
+        public void Animation()
+        {
+            if (animCounter % animSpeed == 0)
+            {
+                if (isJump || !onPlatform)
+                    JumpAnimation();
+                else
+                    RunAnimation();
+            }
+            animCounter += (int)Speed;
+        }
+
+        public void JumpAnimation()
+        {
+            if (animStyle < 3)
+            {
+                if (this.color == MyGame.Form1.Color.Red)
+                {
+                    this.playerImg = new Bitmap($"D:\\gamecourse\\player_red_jump{animStyle + 1}.png");
+                }
+                else
+                {
+                    this.playerImg = new Bitmap($"D:\\gamecourse\\player_blue_jump{animStyle + 1}.png");
+                }
+            }           
+            if (animStyle < 2)
+                animStyle++;
+        }
+
+        public void RunAnimation()
+        {
+            if (this.color == MyGame.Form1.Color.Red)
+            {
+                this.playerImg = new Bitmap($"D:\\gamecourse\\player_red{animStyle + 1}.png");              
+            }
+            else
+            {
+                this.playerImg = new Bitmap($"D:\\gamecourse\\player_blue{animStyle + 1}.png");
+            }
+            if (animStyle == 4)
+                animStyle = 0;
+            else
+                animStyle++;
+        }
+
 
         public void SetRedColor()
         {
             this.color = MyGame.Form1.Color.Red;
-            playerImg = new Bitmap("D:\\player_red.png");
+            animCounter = animSpeed;
         }
 
         public void SetBlueColor()
         {
             this.color = MyGame.Form1.Color.Blue;
-            playerImg = new Bitmap("D:\\player_blue.png");
+            animCounter = animSpeed;
         }
     }
 }

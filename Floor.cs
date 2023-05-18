@@ -16,6 +16,10 @@ namespace MyGame
         public MyGame.Form1.Color color;
         public Image floorImg;
 
+        public int brokableTimer;
+        public bool brokable;
+        public int brokableZone;
+
         public Floor(int x, int y)
         {
             TryChangeColor();
@@ -23,7 +27,9 @@ namespace MyGame
             this.Y = y;
             SizeX = 180;
             SizeY = 30;
+            brokableZone = 15;
         }
+  
 
         public void SetRedColor()
         {
@@ -40,10 +46,21 @@ namespace MyGame
         public void TryChangeColor()
         {
             Random r = new Random();
+            this.brokableTimer = 0;
             if (r.Next(0, 2) == 1)
                 SetRedColor();
             else
                 SetBlueColor();
-        }
+
+            if (r.Next(10, 16) == 15)
+                brokable = true;
+            else
+                brokable = false;
+
+            if (brokable)
+            {
+                this.floorImg = new Bitmap("D:\\floor_brokable.png");
+            }
+        }      
     }
 }
